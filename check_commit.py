@@ -1,12 +1,15 @@
 
 import subprocess
 import os
+import git
 
-def check_for_new_commits_subprocess(git@github.com:tipusm-hub/CI_CD_HTML.git):
+repo_path = "/home/lenovo/B12/git_repo/CI_CD_HTML"
+
+def check_for_new_commits_subprocess(repo_path):
     """Checks if there are new commits using Git commands via subprocess."""
     try:
         # Change directory to the repository path
-        os.chdir(/home/lenovo/B12/git_repo/CI_CD_HTML)
+        os.chdir(repo_path)
 
         # Fetch latest changes
         subprocess.run(["git", "fetch"], check=True)
@@ -25,9 +28,9 @@ def check_for_new_commits_subprocess(git@github.com:tipusm-hub/CI_CD_HTML.git):
         print("Error: Git command not found. Make sure Git is installed and in your PATH.")
     except subprocess.CalledProcessError as e:
         print(f"Error executing Git command: {e}")
-    except Exception as e
+    except Exception as e:
         print(f"An error occurred: {e}")
 
 if __name__ == "__main__":
     repository_path = "/home/lenovo/B12/git_repo/CI_CD_HTML"  # Replace with the actual path
-    check_for_new_commits_subprocess(git@github.com:tipusm-hub/CI_CD_HTML.git)
+    check_for_new_commits_subprocess(repository_path)
