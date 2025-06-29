@@ -1,7 +1,7 @@
 
 import subprocess
 import os
-import git
+#import git
 
 repo_path = "/home/lenovo/B12/git_repo/CI_CD_HTML"
 
